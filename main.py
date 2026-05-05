@@ -1,15 +1,11 @@
 # main.py
 # =============================================
-# LLM Red Teaming Framework
-# Author: Saksham Thakur
-# Framework: OWASP LLM Top 10
-# =============================================
 
 import argparse
 import sys
 import os
 
-# Path fix karo imports ke liye
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from attacks.attacker import (
@@ -84,7 +80,7 @@ def main():
     # Terminal summary
     print_summary(results)
 
-    # Reports generate karo
+    # Reports generate
     if args.report in ("json", "both"):
         generate_json_report(results, args.output)
     if args.report in ("text", "both"):
