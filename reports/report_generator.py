@@ -1,5 +1,4 @@
 # reports/report_generator.py
-# Results ko structured audit report mein convert karo
 
 import json
 import os
@@ -16,7 +15,7 @@ def calculate_stats(results: list[dict]) -> dict:
         stats[atype]["total"]   += 1
         stats[atype]["success"] += int(r["success"])
 
-    # Success rate add karo
+    # Success rate
     for atype in stats:
         t = stats[atype]["total"]
         s = stats[atype]["success"]
